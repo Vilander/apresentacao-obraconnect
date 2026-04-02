@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ObraConnect - Apresentação do Projeto</title>
+    <link
+      rel="shortcut icon"
+      href="/frontend/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .card {
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        border: none;
+        border-radius: 15px;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .icon-box {
+        font-size: 2.5rem;
+        color: #0d6efd;
+        margin-bottom: 15px;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, #0d6efd, #003d99);
+        color: white;
+        padding: 60px 0;
+        margin-bottom: 40px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      #info {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+      #info img {
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero-section text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold">ObraConnect</h1>
+        <p class="lead">Portal de documentação e etapas do projeto</p>
+      </div>
+      <a href="#" id="info" data-bs-toggle="modal" data-bs-target="#modalInfo"
+        ><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACOElEQVR4nO2ay04UQRRAe8djg5jAAK70ayA4BrcI/8BEFL8B2ZCYaFjyCWMIqH9AMCwZ5+FOFgRcS4Qcc+NdTNqi7cft6q4JJ+lk0tNza0666nbVrY6ie0YU4CGwAuwAB0AH+Alc6yGfz/S7t3rtdFQHgHFgHfgC3JKdG+ATsCaxogoEJoBN4Bw7JNZLie1L4inwnfIYAMtld6Nd/LEPTFpLzAOn+OcEmLOSeKK3uyr68h+KSswCXapnkPvOaGaqojvdxddcKRrYoxjyEHwNLOixpeeK8D5Pii3KliOuyBRlKUuXshjc847Yc0aDfzyNyCtsWHDEfmQUu5XmoWc17XB1rTdGsX8k3hWdAFpxrWPCcrAP8yJJRGaxoXCUtJ6QaXUo3AAPXCLPCY9nLhFZ2YXGtktElqAmJIxBa9quRroBinRcjVxZt+JB5MIlYpnjfYn8GmmRq1HpWt0ARTqlpl+PIm0vD0QPItsuEanFhibSdIlMW08aSxb5DUz9I6INfQ5I5NApoQ1JVTwUkdUkkTFdRtZd5Py/BQgt7dddZCNRwqoclKKNIvRSVxxlf6LGIoupJIYa+0D9eJdJYqjGJfsTdeFYklFmEZWZAb5VbcDfMmkjl0Rso6dfscTjQhKx4rPsT1TRnRomErGHpe/N0AlTiZjQUsldrZc5xRaQkYzWspzOaKyNqt6AGNOJ5lHOJYD85lAq67lTqzVSUJZarKzagI/6As3l0Es1l3qurdc071xP3BOFzx+zEDxHsWn+CgAAAABJRU5ErkJggg=="
+          alt="info"
+      /></a>
+
+      <!-- modal info -->
+      <div
+        class="modal fade text-dark"
+        id="modalInfo"
+        tabindex="-1"
+        aria-labelledby="tituloModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-primary">
+              <h5 class="modal-title" id="tituloModal" style="color: #f8f9fa">
+                Sobre o ObraConnect
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div
+              class="modal-body text-start"
+              style="color: #212529 !important"
+            >
+              <h6 class="fw-bold">O que é?</h6>
+              <p>
+                Um marketplace para conectar profissionais de construção e
+                reformas com clientes.
+              </p>
+
+              <hr />
+
+              <h6 class="fw-bold">Tecnologias (Stack)</h6>
+              <ul>
+                <li>
+                  <strong>Backend:</strong> Node.js, Express e MySQL(mariaDB).
+                </li>
+                <li>
+                  <strong>Frontend:</strong> HTML5,CSS, Bootstrap e JavaScript
+                  Vanilla.
+                </li>
+                <li>
+                  <strong>Segurança:</strong> JWT para sessões e Bcrypt para
+                  senhas.
+                </li>
+              </ul>
+
+              <hr />
+
+              <h6 class="fw-bold">Funcionalidades</h6>
+              <ul>
+                <li>
+                  Registro e login com níveis de acesso (cliente, prestador,
+                  admin).
+                </li>
+                <li>Cadastro e gestão de serviços com upload de imagens.</li>
+                <li>
+                  Sistema de avaliações (preço, tempo, higiene e educação).
+                </li>
+              </ul>
+            </div>
+
+            <div class="modal-footer bg-light">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Fechar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mb-5">
+      <div class="row g-4">
+        <!-- UML -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <div class="icon-box"><i class="bi bi-diagram-3"></i></div>
+            <div class="card-body">
+              <h5 class="card-title">UML</h5>
+              <p class="card-text text-muted">
+                Diagramas de Caso de Uso detalhando as interações do sistema.
+              </p>
+              <a
+                href="#"
+                class="btn btn-outline-primary stretched-link"
+                data-bs-toggle="modal"
+                data-bs-target="#modalUML"
+                >Visualizar</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- MODAL/DIALOG -->
+        <div
+          class="modal fade"
+          id="modalUML"
+          tabindex="-1"
+          aria-labelledby="tituloModal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="tituloModal">Diagrama UML</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-center">
+                <img
+                  src="_documentos/UML.svg"
+                  class="img-fluid rounded"
+                  alt="Diagrama UML"
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FIM UML -->
+
+        <!-- FLUXOGRAMA -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <div class="icon-box"><i class="bi bi-arrow-repeat"></i></div>
+            <div class="card-body">
+              <h5 class="card-title">Fluxogramas</h5>
+              <p class="card-text text-muted">
+                Mapeamento das 3 principais funcionalidades do projeto.
+              </p>
+              <a
+                href="https://www.figma.com/board/ki2SbXMcKDtrCWlqcOAL6l/Fluxograma-ObraConnect?t=oWvalPyVI7EQWkO3-1"
+                class="btn btn-outline-primary stretched-link"
+                target="_blank"
+                >Ver Fluxos</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- FIM FLUXOGRAMA -->
+        <!-- WIREFRAME -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <div class="icon-box">
+              <i class="bi bi-layout-sidebar-inset"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Wireframe</h5>
+              <p class="card-text text-muted">
+                Esboços de interface e experiência do usuário (UX/UI).
+              </p>
+              <a
+                href="https://www.figma.com/design/3wH3wbCX0Av0o5Kj6WcEw6/ObraConnect-v2?t=yYNr5BArYTdL1EY4-1"
+                class="btn btn-outline-primary stretched-link"
+                target="_blank"
+                >Abrir Protótipo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- DER -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <div class="icon-box"><i class="bi bi-database"></i></div>
+            <div class="card-body">
+              <h5 class="card-title">DER</h5>
+              <p class="card-text text-muted">
+                Diagrama Entidade Relacionamento e modelagem de dados.
+              </p>
+              <a
+                href="#"
+                class="btn btn-outline-primary stretched-link"
+                data-bs-toggle="modal"
+                data-bs-target="#modalDER"
+                >Visualizar DER</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="modalDER"
+          tabindex="-1"
+          aria-labelledby="tituloModal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="tituloModal">Diagrama UML</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-center">
+                <img
+                  src="_documentos/DER2.png"
+                  alt="Diagrama de Banco de Dados"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FIM DER -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4">
+            <div class="icon-box"><i class="bi bi-github"></i></div>
+            <div class="card-body">
+              <h5 class="card-title">Código Fonte</h5>
+              <p class="card-text text-muted">
+                Repositório oficial no GitHub com todo o histórico de commits.
+              </p>
+              <a
+                href="https://github.com/Vilander/projeto-obraConnect"
+                class="btn btn-dark stretched-link"
+                target="_blank"
+                >Acessar GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center p-4 border-primary shadow-sm">
+            <div class="icon-box text-success"><i class="bi bi-globe"></i></div>
+            <div class="card-body">
+              <h5 class="card-title">Página do Projeto</h5>
+              <p class="card-text text-muted">
+                Acesse a versão live ou landing page oficial do ObraConnect.
+              </p>
+              <a
+                href="/frontend/index.html"
+                class="btn btn-success stretched-link"
+                target="_blank"
+                >Visitar Site</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center py-4 text-muted">
+      <p>&copy; 2026 Vilander Costa - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
